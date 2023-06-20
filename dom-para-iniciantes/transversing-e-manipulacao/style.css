@@ -143,7 +143,10 @@ body {
     margin-right: 10px;
     background: #FB5;
 }
-
+.azul {
+    background-color: blue;
+    color: white;
+}
 .faq-lista dd {
     font-family: Helvetica, Arial;
     margin-bottom: .5rem;

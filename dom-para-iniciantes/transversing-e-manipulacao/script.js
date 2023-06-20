@@ -1,37 +1,18 @@
-const h1 = document.querySelector('h1');
-const animaisLista = document.querySelector('.animais-lista');
-console.log(h1.innerText);
-console.log(animaisLista.innerHTML)
+// Duplique o menu e adicione ele em copy
+const menu = document.querySelector('.menu');
+const copy = document.querySelector('.copy');
 
-h1.innerHTML = '<p>Novo título</p>';
+const clonemenu = menu.cloneNode(true);
+copy.appendChild(clonemenu);
 
+// Selecione o primeiro DT da dl de Faq
+const dl = document.querySelector('dl');
+console.log(dl.children[0])
+// Selecione o DD referente ao primeiro DT
+console.log(dl.children[0].nextElementSibling);
+// Substitua o conteúdo html de .faq pelo de .animais
 
-const lista = document.querySelector('.animais-lista');
-
-console.log(lista);
-
-console.log(lista.parentElement); //retorna o pai
-console.log(lista.previousElementSibling); //retorna o elemento anterior
-console.log(lista.nextElementSibling); //retorna o elemento posterior
-
-console.log(lista.children); //retorna uma HTML collection dos filhos
-console.log(lista.children[0]); //acessa o primeiro filho da lista
-
-console.log(lista.children[--lista.children.length]); //retorna o último filho da lista
-
-console.log(lista.querySelector('li:last-child'));
-
-console.log(lista.childNodes);
-console.log(lista.previousSibling);
-
+const faq = document.querySelector('.faq');
 const animais = document.querySelector('.animais');
-const contato = document.querySelector('.contato');
-const titulo = document.querySelector('.titulo');
-
-// animais.appendChild(titulo); //move item para o final do outro
-const mapa = document.querySelector('.mapa')
-
-contato.removeChild()
-
-contato.insertBefore(animais, mapa)
+faq.innerHTML = animais.innerHTML;
 
