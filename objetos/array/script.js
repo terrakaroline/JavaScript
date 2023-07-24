@@ -44,3 +44,12 @@ carros[20] = 'Kim'
 console.log(carros)
 
 const li = document.querySelectorAll('li');
+
+const carros = ['Ford', 'Fiat', 'VW', 'Honda'];
+// Remova o último carro, mas antes de remover
+// salve a array original em outra variável
+const carrosOriginal = carros.slice();
+carros.pop();
+console.log(carrosOriginal, carros);
+const arrayLi = Array.from(li);
+console.log(arrayLi)
