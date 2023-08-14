@@ -32,6 +32,18 @@ let html = `<section>
 // utilizando split e join
 html = html.split('section').join('ul').split('div').join('li');
 console.log(html);
+const instrumentos = ['Guitarra', 'Baixo', 'Violão'];
+const precos = [49, 99, 69, 89];
+
+const dados = [new String('Tipo 1'), ['Carro', 'Portas', {cor: 'Azul', preco: 2000}], function andar(nome) { console.log(nome) }];
+
+const carros = new Array('Ford', 'Fiat', 'Honda');
+carros[2] = 'Ferrari';
+carros[3] = 'Kia';
+carros[20] = 'Kim'
+console.log(carros)
+
+const li = document.querySelectorAll('li');
 
 const carros = ['Ford', 'Fiat', 'VW', 'Honda'];
 // Remova o último carro, mas antes de remover
@@ -39,3 +51,5 @@ const carros = ['Ford', 'Fiat', 'VW', 'Honda'];
 const carrosOriginal = carros.slice();
 carros.pop();
 console.log(carrosOriginal, carros);
+const arrayLi = Array.from(li);
+console.log(arrayLi)
